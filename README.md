@@ -17,3 +17,8 @@ Dummy application that produces output in regular intervals
   - logs JSON format to stderr: `docker run -it --rm --name dummy-logger-running dummy-logger -f json -o stderr -d 5`
   - logs TEXT format to stderr: `docker run -it --rm --name dummy-logger-running dummy-logger -f text -o stdout -d 5`
   - logs JSON format to /tmp/logger.log: `docker run -v /tmp:/tmp -it --rm --name dummy-logger-running dummy-logger -f text -o /tmp/logger.log -d 5`
+
+### Official Images
+
+- Pull image: `docker pull ghcr.io/martin-majlis/dummy-logger:main`
+- Run image: `docker run -it --rm --name dummy-logger-running ghcr.io/martin-majlis/dummy-logger:main`

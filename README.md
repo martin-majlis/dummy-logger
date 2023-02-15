@@ -21,4 +21,4 @@ Dummy application that produces output in regular intervals
 ### Official Images
 
 - Pull image: `docker pull ghcr.io/martin-majlis/dummy-logger:main`
-- Run image: `docker run -it --rm --name dummy-logger-running ghcr.io/martin-majlis/dummy-logger:main`
+- Run image: `docker run -it --rm --name dummy-logger-running ghcr.io/martin-majlis/dummy-logger`

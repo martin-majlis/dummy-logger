@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/sh
 
 
 output=stdout
@@ -65,12 +65,13 @@ echo "Output: ${output}; Delay: ${delay}; Format: ${format}"
 
 while :
 do
+    now=`date -Iseconds`;
     case "${format}" in
         txt | text )
-            line="`date  --iso-8601=seconds` output=${output}; delay=${delay}; format=${format}"
+            line="${now} output=${output}; delay=${delay}; format=${format}"
             ;;
         json )
-            line="{\"date\": \"`date  --iso-8601=seconds`\", \"output\": \"${output}\", \"delay\": \"${delay}\", \"format\": \"${format}\", \"nested\": {\"a\": 1, \"b\": 2, \"c\": 3}}"
+            line="{\"date\": \"${now}\", \"output\": \"${output}\", \"delay\": \"${delay}\", \"format\": \"${format}\", \"nested\": {\"a\": 1, \"b\": 2, \"c\": 3}}"
             ;;
     esac
 
